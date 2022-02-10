@@ -4,12 +4,10 @@ use petgraph::{
 };
 use std::default::Default;
 
-use std::fmt::Debug;
-
 /// Construct the corresponding line graph
 pub fn line_graph<N, E, Ix>(g: &UnGraph<N, E, Ix>) -> UnGraph<E, N, DefaultIx>
 where
-    N: Clone + Debug,
+    N: Clone,
     E: Clone + Default,
     Ix: IndexType,
 {
